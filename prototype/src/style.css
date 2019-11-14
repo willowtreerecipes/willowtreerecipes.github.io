@@ -1,0 +1,142 @@
+body {
+  height: 100%;
+  /*background-color: #A0E09B;*/
+  background-image: url("../images/leaves.jpg");
+  padding: 5px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  align-content: stretch;
+}
+
+/*----------------------Overall Layout--------------------- */
+header {
+  text-align: center;
+  flex-grow: 1;
+  max-height: 100px;
+  background-color: Lavender;
+}
+
+nav {
+  background-color: Lavender;
+  height: 60px;
+  padding: 0px 5px;
+
+  display: flex;
+  flex-flow: wrap;
+  align-content: stretch;
+  align-items: stretch;
+}
+
+main {
+  height: 100%;
+  flex-grow: 4;
+}
+
+footer {
+  /*position: absolute;
+  bottom: 0;*/
+  flex-grow: 1;
+  background-color: Lavender;
+  max-height: 75px;
+  padding: 5px;
+}
+
+/*---------------------Formatting------------------------*/
+/*~~~~~~~~~ HEADER and HEADINGS ~~~~~~~~~~~~*/
+h1 {
+  font: bold 42px;
+  color: BlueViolet;
+}
+
+h2 {
+  font-weight: bold;
+  font-size: 24px;
+  padding: 5px;
+}
+
+/*~~~~~~~~~~~~~~~~~NAV~~~~~~~~~~~~~~~~~~~~~~*/
+nav a {
+  flex-grow: 1;
+  text-align: center;
+  padding: 10px;
+  margin: auto;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+nav a:hover {
+  background-color: #D1A9DF;
+  border-radius: 5px;
+  font-weight: bold;
+}
+/*
+  Todo:
+    - Make nav "pills" (flex)
+*/
+
+/*~~~~~~~~~~ BODY ~~~~~~~~~~~~~~*/
+
+/*Layout*/
+.layout-container {
+  display: flex;
+  height: 100%;
+}
+
+aside { /* Side Menus */
+  background-color: Lavender;
+  flex-grow: 1;
+  padding: 10px;
+  min-width: 120px;
+}
+
+section { /* Center Body */
+  flex-grow: 7;
+  background-color: #DCBDE7;
+  margin: 5px;
+  padding: 5px;
+  border: 3px inset blue;
+  border-radius: 5px;
+}
+
+
+/* Recipe Cards */
+.recipes-container {
+  display: flex;
+  align-content: flex-start;
+  justify-content: space-around;
+  flex-flow: wrap;
+}
+
+article {
+  padding: 10px;
+  margin: 5px;
+  border: 3px outset blueviolet;
+  border-radius: 5px;
+}
+
+.recipe {
+  width: 150px;
+  height: 200px;
+  background-color: white;
+}
+
+/* Tag Nav (left aside) */
+.tag-nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.tag-nav a {
+  text-decoration: none;
+  margin: 5px;
+  padding: 5px;
+}
+
+
+/* MISC */
+figure {
+  margin: 0 auto;
+}
