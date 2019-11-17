@@ -1,4 +1,5 @@
-//import {recipes} from "./modules/json-handler.mjs";
+import {recipes} from "./modules/json-handler.mjs";
+/*
 const recipes = {
   'BBQ Meatballs': {
     'ingredients': ['ground beef', 'onions', 'worsteshire sauce'],
@@ -16,6 +17,7 @@ const recipes = {
     ]
   }
 }
+*/
 
 //recipe cards generation
 let recip = new Object();
@@ -27,7 +29,7 @@ for (recipe in recipes) {
   recip.steps = recipes[recipe]['steps'];
   recip.time = recipes[recipe]['time'];
 
-markup += `
+recipeCard += `
 <article class="recipe">
   <a href="#">
     <h3>${recip.name}</h3>
@@ -42,7 +44,7 @@ markup += `
 `;
 }
 
-document.getElementById('recipes-container').innerHTML = markup;
+document.getElementById('recipes-container').innerHTML = recipeCard;
 
 
 function mapList(array) {

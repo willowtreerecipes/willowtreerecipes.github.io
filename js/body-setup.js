@@ -3,10 +3,10 @@
 const siteName = "Willowtree Recipes";
 
 // Nav links
-const aboutMeURL = "#";
+const aboutMeURL = "about-me.html";
 const recipesURL = "recipes.html";
-const menusURL = "#";
-const toolsURL = "#";
+const menusURL = "menus.html";
+const toolsURL = "tools.html";
 
 // Footer Stuff
 
