@@ -1,8 +1,13 @@
+html {
+  margin: 0;
+  padding: 0;
+}
+
 body {
   height: 100%;
   /*background-color: #A0E09B;*/
-  background-image: url("../images/leaves.jpg");
-  padding: 5px;
+  /*background-image: url("../images/leaves.jpg");*/
+  /*padding: 5px;*/
 
   display: flex;
   flex-direction: column;
@@ -12,15 +17,16 @@ body {
 
 /*----------------------Overall Layout--------------------- */
 header {
-  text-align: center;
+  /*text-align: center;*/
+  vertical-align: center;
   flex-grow: 1;
-  max-height: 100px;
-  background-color: Lavender;
+  min-height: 60px;
+  background-color: #F3EAF6;
 }
 
 nav {
-  background-color: Lavender;
-  height: 60px;
+  background-color: #F3EAF6;
+  min-height: 25px;
   padding: 0px 5px;
 
   display: flex;
@@ -38,7 +44,7 @@ footer {
   /*position: absolute;
   bottom: 0;*/
   flex-grow: 1;
-  background-color: Lavender;
+  background-color: #F3EAF6;
   max-height: 75px;
   padding: 5px;
 }
@@ -60,7 +66,7 @@ h2 {
 nav a {
   flex-grow: 1;
   text-align: center;
-  padding: 10px;
+  /*padding: 10px;*/
   margin: auto;
   text-decoration: none;
   font-size: 18px;
@@ -85,19 +91,19 @@ nav a:hover {
 }
 
 aside { /* Side Menus */
-  background-color: Lavender;
+  background-color: #F3EAF6;
   flex-grow: 1;
-  padding: 10px;
-  min-width: 120px;
+  /*padding: 10px;*/
+  width: 120px;
 }
 
 section { /* Center Body */
   flex-grow: 7;
-  background-color: #DCBDE7;
-  margin: 5px;
+  background-color: #F9F4EF;
+  /*margin: 5px;*/
   padding: 5px;
-  border: 3px inset blue;
-  border-radius: 5px;
+  /*border: 3px inset blue;
+  border-radius: 5px;*/
 }
 
 
@@ -105,13 +111,13 @@ section { /* Center Body */
 .recipes-container {
   display: flex;
   align-content: flex-start;
-  justify-content: space-around;
+  /*justify-content: space-around;*/
   flex-flow: wrap;
 }
 
 article {
   padding: 10px;
-  margin: 5px;
+  margin: 2px;
   border: 3px outset blueviolet;
   border-radius: 5px;
 }
@@ -120,6 +126,16 @@ article {
   width: 150px;
   height: 200px;
   background-color: white;
+  margin: 5px;
+  overflow: hidden;
+}
+
+.recipe h3 {
+  margin: 0px;
+}
+
+.recipe ul.ingredients {
+  margin-top: -15px;
 }
 
 /* Tag Nav (left aside) */
