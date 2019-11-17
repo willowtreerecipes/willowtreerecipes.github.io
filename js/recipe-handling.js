@@ -1,5 +1,4 @@
-import {recipes} from "./modules/json-handler.mjs";
-/*
+//import {recipes} from "./modules/json-handler.mjs";
 const recipes = {
   'BBQ Meatballs': {
     'ingredients': ['ground beef', 'onions', 'worsteshire sauce'],
@@ -17,11 +16,10 @@ const recipes = {
     ]
   }
 }
-*/
 
 //recipe cards generation
 let recip = new Object();
-let markup = [];
+let recipeCard = [];
 for (recipe in recipes) {
   recip.name = recipe;
   recip.servings = recipes[recipe]['servings'];
