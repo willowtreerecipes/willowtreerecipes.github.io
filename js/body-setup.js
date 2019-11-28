@@ -27,11 +27,19 @@ let header =
 
 let nav =
 `
-<a href="index.html">Home</a>
-<a href=${aboutMeURL}>About Me</a>
-<a href=${recipesURL}>Recipes</a>
-<a href=${menusURL}>Menus</a>
-<a href=${toolsURL}>Tools</a>
+<ul>
+  <li><a href="index.html">Home</a></li>
+  <li><a href=${aboutMeURL}>About Me</a></li>
+  <li><div class="drop-btn">
+  <a href=${recipesURL}>Recipes</a>
+    <ul class="drop-content hide">
+      <li><a href='#'>Main Dishes</a></li>
+      <li><a href='#'>Side Dishes</a></li>
+    </ul>
+  </div></li>
+  <li><a href=${menusURL}>Menus</a></li>
+  <li><a href=${toolsURL}>Tools</a></li>
+</ul>
 `;
 
 let footer =
@@ -39,12 +47,22 @@ let footer =
 <p>&copy; 2019 ${siteName} Inc.</p>
 `;
 
-document.getElementById("header").innerHTML = header;
-document.getElementById("nav").innerHTML = nav;
-document.getElementById("footer").innerHTML = footer;
 
-// Breadcrumbs
-let pathName = window.location.pathname;
-pathName = pathName.split('/').pop();
+$(document).ready(function(){
+  document.getElementById("header").innerHTML = header;
+  document.getElementById("nav").innerHTML = nav;
+  document.getElementById("footer").innerHTML = footer;
 
-document.getElementById("breadcrumbs").innerHTML = pathDict[pathName];
+  // Breadcrumbs
+  let pathName = window.location.pathname;
+  pathName = pathName.split('/').pop();
+
+  document.getElementById("breadcrumbs").innerHTML = pathDict[pathName];
+
+  $('.drop-btn').on('mouseenter', () => {
+    $('.drop-content').removeClass('hide');
+  })
+  $('.drop-content').on('mouseleave', () => {
+    $('.drop-content').addClass('hide');
+  })
+})

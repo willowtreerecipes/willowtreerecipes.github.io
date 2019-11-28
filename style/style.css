@@ -26,13 +26,13 @@ header {
 
 nav {
   background-color: #F3EAF6;
-  min-height: 25px;
-  padding: 0px 5px;
+  /*min-height: 25px;*/
+  /*padding: 0px 5px;*/
 
+/*
   display: flex;
-  flex-flow: wrap;
   align-content: stretch;
-  align-items: stretch;
+  align-items: stretch; */
 }
 
 main {
@@ -63,24 +63,83 @@ h2 {
 }
 
 /*~~~~~~~~~~~~~~~~~NAV~~~~~~~~~~~~~~~~~~~~~~*/
+nav li {
+  list-style-type: none;
+}
+
 nav a {
-  flex-grow: 1;
   text-align: center;
-  /*padding: 10px;*/
   margin: auto;
   text-decoration: none;
   font-size: 18px;
 }
 
 nav a:hover {
-  background-color: #D1A9DF;
   border-radius: 5px;
   font-weight: bold;
 }
-/*
-  Todo:
-    - Make nav "pills" (flex)
-*/
+
+/* Nav on Normal Screens */
+@media {
+  nav li {
+    width: 100px;
+    display: inline-block;
+    text-align: center;
+  }
+  nav ul {
+    margin: 0;
+    padding: 0;
+  }
+
+  .drop-btn {
+    position: relative;
+  }
+
+  .drop-content {
+    position: absolute;
+    background-color: white;
+    box-shadow: 5px 5px 3px lightgrey;
+  }
+}
+
+/* Nav on Small Screens */
+@media (max-width: 535px) {
+  nav {
+    display: block;
+  }
+  nav li {
+    width: 100%;
+    margin: 1px;
+    padding: 2px;
+  }
+  nav ul {
+    margin: 5px;
+    padding: 0;
+  }
+  .drop-btn {
+    position: relative;
+  }
+  .drop-content {
+    position: relative;
+    box-shadow: 0px 0px;
+  }
+}
+
+.hide {
+  display: none;
+}
+
+.drop-content li {
+  text-decoration: none;
+  list-style-type: none;
+  margin: 0px;
+  padding: 5px;
+}
+
+.drop-content a {
+  font-size: 14px;
+}
+
 
 /*~~~~~~~~~~ BODY ~~~~~~~~~~~~~~*/
 
