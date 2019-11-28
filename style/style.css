@@ -4,7 +4,6 @@ html {
 }
 
 body {
-  height: 100%;
   /*background-color: #A0E09B;*/
   /*background-image: url("../images/leaves.jpg");*/
   /*padding: 5px;*/
@@ -20,7 +19,6 @@ header {
   /*text-align: center;*/
   vertical-align: center;
   flex: 1;
-  min-height: 60px;
   background-color: #F3EAF6;
 }
 
@@ -54,6 +52,7 @@ footer {
 h1 {
   font: bold 42px;
   color: BlueViolet;
+  margin: 5px;
 }
 
 h2 {
@@ -72,6 +71,7 @@ nav a {
   margin: auto;
   text-decoration: none;
   font-size: 18px;
+  display: inline-block;
 }
 
 nav a:hover {
@@ -85,6 +85,7 @@ nav a:hover {
     width: 100px;
     display: inline-block;
     text-align: center;
+    margin: 10px 20px;
   }
   nav ul {
     margin: 0;
@@ -99,6 +100,12 @@ nav a:hover {
     position: absolute;
     background-color: white;
     box-shadow: 5px 5px 3px lightgrey;
+  }
+}
+
+@media (max-width: 750px) {
+  nav li {
+    margin: 10px auto;
   }
 }
 
@@ -152,7 +159,6 @@ nav a:hover {
 aside { /* Side Menus */
   background-color: #F3EAF6;
   /*padding: 10px;*/
-  flex: 0 0 150px;
 }
 
 section { /* Center Body */
@@ -195,6 +201,10 @@ article {
 }
 
 /* Tag Nav (left aside) */
+.tag-nav {
+  flex: 0 0 150px;
+}
+
 .tag-nav ul {
   list-style-type: none;
   margin: 0;
@@ -205,6 +215,15 @@ article {
   text-decoration: none;
   margin: 5px;
   padding: 5px;
+}
+
+.tag-nav-btn {
+  flex: 0 0 15px;
+  background-color: #F3EAF6;
+  cursor: pointer;
+  text-align: center;
+  border-right: 1px solid grey;
+  padding: 100px 0;
 }
 
 

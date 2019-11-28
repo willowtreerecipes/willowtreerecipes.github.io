@@ -59,10 +59,26 @@ $(document).ready(function(){
 
   document.getElementById("breadcrumbs").innerHTML = pathDict[pathName];
 
+  // Fill entire window if content isn't enough to
+  let winHeight = $(window).height();
+  let bodHeight = $('.body').height();
+  if (bodHeight<winHeight) {
+    $('.body').css({height: '100vh'})
+  }
+
+  // Recipes navigation dropdown menu
   $('.drop-btn').on('mouseenter', () => {
-    $('.drop-content').removeClass('hide');
+    $('.drop-content').slideDown(200);
   })
   $('.drop-content').on('mouseleave', () => {
-    $('.drop-content').addClass('hide');
+    $('.drop-content').slideUp(100);
+  })
+
+  // Aside hiding
+  $('.tag-nav-btn').on('click', () => {
+    $('.tag-nav').toggleClass('hide')
+    if ($('.tag-nav').hasClass('hide')) {
+      $('.tag-nav-btn').html('<')
+    } else $('.tag-nav-btn').html('>')
   })
 })
