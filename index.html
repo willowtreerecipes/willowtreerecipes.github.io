@@ -7,25 +7,28 @@
   </head>
   <body>
     <!-- Header Stuff -->
-    <header id="header">
+    <header id="header" class="header-container">
       <!-- loaded from body-setup.js -->
+
+      <nav id="nav">
+        <!-- loaded from body-setup.js -->
+      </nav>
+
     </header>
-    <nav id="nav">
-      <!-- loaded from body-setup.js -->
-    </nav>
 
     <!--Body of website-->
     <main>
       <div class="layout-container">
+
       <aside class="tag-nav">
         <!-- TODO: Make this flexible/hideable with JS-->
         <figure>
           <img src="./images/poppy.gif">
         </figure>
-        </aside>
+      </aside>
 
       <section>
-        <p>Home</p>
+        <p id="breadcrumbs"></p>
         <h2>What's new</h2>
 
         <p>16 NOV 2019</p>

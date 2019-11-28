@@ -10,6 +10,15 @@ const toolsURL = "tools.html";
 
 // Footer Stuff
 
+// Breadcrumbs Stuff
+const pathDict = {
+  'index.html': 'Home',
+  'recipes.html': 'Home / Recipes',
+  'about-me.html': 'Home / About Me',
+  'menus.html': 'Home / Menus',
+  'tools.html': 'Home / Tools'
+};
+
 //---------------------------------------------------[Markup]----
 let header =
 `
@@ -33,3 +42,9 @@ let footer =
 document.getElementById("header").innerHTML = header;
 document.getElementById("nav").innerHTML = nav;
 document.getElementById("footer").innerHTML = footer;
+
+// Breadcrumbs
+let pathName = window.location.pathname;
+pathName = pathName.split('/').pop();
+
+document.getElementById("breadcrumbs").innerHTML = pathDict[pathName];
