@@ -12,11 +12,11 @@ const toolsURL = "tools.html";
 
 // Breadcrumbs Stuff
 const pathDict = {
-  'index.html': 'Home',
-  'recipes.html': 'Home / Recipes',
-  'about-me.html': 'Home / About Me',
-  'menus.html': 'Home / Menus',
-  'tools.html': 'Home / Tools'
+  'index.html': '<a href="index.html">Home</a>',
+  'recipes.html': '<a href="index.html">Home</a> / <a href="recipes.html">Recipes</a>',
+  'about-me.html': '<a href="index.html">Home</a> / <a href="about-me.html">About Me</a>',
+  'menus.html': '<a href="index.html">Home</a> / <a href="menus.html">Menus</a>',
+  'tools.html': '<a href="index.html">Home</a> / <a href="tools.html">Tools</a>'
 };
 
 //---------------------------------------------------[Markup]----

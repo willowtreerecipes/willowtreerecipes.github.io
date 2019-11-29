@@ -100,6 +100,7 @@ nav a:hover {
     position: absolute;
     background-color: white;
     box-shadow: 5px 5px 3px lightgrey;
+    margin-top: 10px;
   }
 }
 
@@ -140,7 +141,7 @@ nav a:hover {
   text-decoration: none;
   list-style-type: none;
   margin: 0px;
-  padding: 5px;
+  padding: 10px;
 }
 
 .drop-content a {
